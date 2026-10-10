@@ -1,5 +1,5 @@
 
-name: Update GitHub Trophies
+name: 🏆 Update GitHub Trophies
 
 on:
   schedule:
@@ -14,20 +14,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate trophies
+      - name: 🏆 Generate trophies
         uses: soulteary/github-profile-trophy-action@v1.0.0
         with:
           options: 'username=mdimranhs&theme=onestar&column=6&margin-w=4&no-bg=false&no-frame=false'
           path: trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit trophy SVG
+      - name: 💾 Commit updated trophies
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add trophy.svg
-          git commit -m "Update GitHub trophies" || exit 0
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "🏆 chore: update GitHub trophies"
+            git push
+          else
+            echo "No trophy changes to commit."
+          fi
