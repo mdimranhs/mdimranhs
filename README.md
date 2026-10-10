@@ -49,7 +49,11 @@
 
 ## 🏆 GitHub Trophies
 
-![](https://trophy.benkou.dev/?username=mdimranhs&theme=onestar&no-frame=false&no-bg=false&margin-w=4)
+
+<p align="center">
+  <img src="./trophy.svg" alt="GitHub Trophies" />
+</p>
+
 
 ## 🚀 Latest Projects
 
