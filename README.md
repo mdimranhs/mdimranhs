@@ -49,12 +49,8 @@
 
 ## 🏆 GitHub Trophies
 
-
-<p align="center">
-  <img src="./trophy.svg" alt="GitHub Trophies" />
-</p>
-
-
+<img src="./trophy.svg" alt="GitHub Trophies" />
+ 
 ## 🚀 Latest Projects
 
 These are my advanced and polished projects, showcasing full functionality and design.
